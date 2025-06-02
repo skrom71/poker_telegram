@@ -1,0 +1,125 @@
+@import '../../../styles/global.css';
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: fixed; /* или 'absolute' для компонента, а не всей страницы */
+}
+
+@layer components {
+  .table {
+    @apply absolute bg-cover bg-center -translate-x-1/2 -translate-y-1/2;
+    aspect-ratio: 1344/840;
+  }
+
+  .table-portrait {
+    @apply max-w-[var(--max-width)] w-[80%] top-[50%] left-[50%];
+    aspect-ratio: 1344/840;
+  }
+
+  .table-landscape {
+    @apply max-w-[var(--max-width)] w-[80%] top-[50%] left-[50%];
+    ascpect-ratio: 840/1344;
+  }
+
+  .pots {
+    @apply flex absolute justify-center -translate-x-1/2 -translate-y-1/2 gap-[1%] left-[50%];
+  }
+
+  .pots-portrait {
+    @apply flex-wrap-reverse w-[45%] top-[40%];
+  }
+
+  .pots-landscape {
+    @apply flex-row w-[55%] top-[38%];
+  }
+
+  .blinds {
+    @apply absolute left-[50%] -translate-x-1/2 -translate-y-1/2 rounded-[20px] text-neutral-300 border px-2 text-[min(3vw,3vh)];
+  }
+
+  .blinds-portrait {
+    @apply top-[59%];
+  }
+
+  .blinds-landscape {
+    @apply top-[63%];
+  }
+
+  .board {
+    @apply absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-row gap-2 justify-center;
+  }
+
+  .board-portrait {
+    @apply h-[10%];
+  }
+
+  .board-landscape {
+    @apply h-[15%];
+  }
+
+  .seat1-portrait {
+    @apply top-0 left-[20%];
+  }
+
+  .seat1-landscape {
+    @apply top-0 left-[12%];
+  }
+
+  .seat2-portrait {
+    @apply top-0 right-[20%];
+  }
+
+  .seat2-landscape {
+    @apply -top-[3%] right-[50%] translate-x-1/2;
+  }
+
+  .seat3-portrait {
+    @apply top-[30%] -right-[5%];
+  }
+
+  .seat3-landscape {
+    @apply top-[0%] right-[12%];
+  }
+
+  .seat4-portrait {
+    @apply bottom-[30%] -right-[5%];
+  }
+
+  .seat4-landscape {
+    @apply bottom-[50%] -right-[3%] translate-y-[50%];
+  }
+
+  .seat5-portrait {
+    @apply bottom-[0%] left-[50%] -translate-x-[50%];
+  }
+
+  .seat5-landscape {
+    @apply bottom-[0%] right-[25%];
+  }
+
+  .seat6-portrait {
+    @apply bottom-[30%] -left-[5%];
+  }
+
+  .seat6-landscape {
+    @apply bottom-[0%] left-[25%];
+  }
+
+  .seat7-portrait {
+    @apply top-[30%] -left-[5%];
+  }
+
+  .seat7-landscape {
+    @apply bottom-[50%] -left-[3%] translate-y-[50%];
+  }
+
+  .bet-panel {
+    @apply absolute bottom-[3%] left-1/2 -translate-x-1/2 max-w-[var(--max-width)] w-[calc(100vw)] px-[2%] z-0;
+  }
+
+  .action-bar {
+    @apply absolute bottom-[3%] left-1/2 -translate-x-1/2 max-w-[var(--max-width)] w-[calc(100vw)] px-[2%] flex flex-row gap-[2%] justify-between z-0;
+  }
+}

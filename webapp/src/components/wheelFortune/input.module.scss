@@ -1,0 +1,111 @@
+@use '../../styles/theme' as *;
+
+.wheel_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  // z-index: 12;
+  background-color: #161616d3;
+  border-radius: min(2vw, 2vh);
+  padding: min(5vw, 5vh) min(3vw, 3vh);
+  backdrop-filter: blur(min(0.1vw, 0.1vh));
+  box-shadow: 0 0 15px black;
+  gap: 4vh;
+
+  .pointer {
+    position: absolute;
+    top: -1vh;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    width: 32px;
+    height: 45px;
+    background: linear-gradient(45deg, #19262d, #19262d54);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    border-radius: min(2vw, 2vh);
+    z-index: 20;
+  }
+}
+
+.wheel_wrapper {
+  display: inline-block;
+  background: linear-gradient(45deg, rgb(238, 255, 0), rgb(255, 183, 0));
+  padding: 15px;
+  border-radius: 50%;
+  position: relative;
+  // overflow: hidden;
+  box-shadow: 0 4px 55px rgba(255, 196, 0, 0.7);
+}
+
+.wheel_wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 60px rgb(32, 30, 0);
+  pointer-events: none;
+}
+
+.wheel_svg {
+  display: block;
+  border-radius: 50%;
+}
+
+.back_button {
+  position: absolute;
+  margin-top: 2vh;
+  margin-right: 2vh;
+  padding: 2%;
+  width: 12%;
+  border: 0;
+  background: linear-gradient(to bottom, #767676, #767676, #767676);
+  border-radius: 2vw;
+  font-family: 'Asap', serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #c2ebc1;
+  font-size: min(3vw, 3vh);
+  box-shadow: 0px 0px 12px #767676;
+  opacity: 0.98;
+  top: 0%;
+  right: 0%;
+  z-index: 12;
+}
+
+.spin_button {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.spin_button {
+  margin-top: 1vh;
+  // padding: 10px 20px;
+  // width: 12%;
+  width: 20vw;
+  height: 8vw;
+  border: 0;
+  background: linear-gradient(to bottom, #1900ff, #2710fa, #2a02da);
+  border-radius: 2vw;
+  font-family: 'Asap', serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #c2ebc1;
+  font-size: min(3.5vw, 3.5vh);
+  box-shadow: 0px 0px 12px #350391;
+  opacity: 0.98;
+  z-index: 12;
+}
+
+.result_text {
+  font-family: $defaultFontFamily;
+  font-size: min(5vw, 5vh);
+  color: $accentColor;
+  font-weight: 600;
+  border-radius: 50%;
+  // border: 2px solid $lightGray;
+  text-shadow: 0 0 4px #ff0015;
+}

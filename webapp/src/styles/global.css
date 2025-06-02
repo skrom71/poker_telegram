@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@layer base {
+  body,
+  html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    @apply font-display bg-slate-800 text-neutral-200;
+  }
+
+  .page {
+    @apply p-6 flex flex-col mx-auto max-w-xl h-screen;
+  }
+
+  .dialog {
+    @apply z-30 w-full fixed top-0 backdrop-blur-[1vw] bg-[#00000036];
+  }
+
+  .dialog-workspace {
+    @apply px-6 max-w-xl h-screen mx-auto flex items-center;
+  }
+
+  .button {
+    @apply active:scale-99 whitespace-nowrap;
+  }
+
+  .input {
+    @apply text-center text-neutral-200 bg-zinc-900 rounded-lg outline-none focus:ring-1 focus:ring-blue-500;
+  }
+}
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes color-flow {
+    0% {
+      border-color: #7ab311;
+      box-shadow: 0px 0px 5px #7ab311;
+    } /* Зелёный */
+    25% {
+      border-color: #96a009;
+      box-shadow: 0px 0px 5px #96a009;
+    } /* Оранжевый */
+    75% {
+      border-color: #945b06;
+      box-shadow: 0px 0px 5px #945b06;
+    } /* Оранжевый */
+    100% {
+      border-color: #941313;
+      box-shadow: 0px 0px 5px #941313;
+    } /* Красный (используем цвет из Tailwind) */
+  }
+
+  .animate-color-flow {
+    animation: color-flow 47s linear infinite;
+  }
+}
+
+@theme {
+  --color-slate-50: #f3f4f6;
+  --color-slate-100: #e5e7eb;
+  --color-slate-200: #d1d5db;
+  --color-slate-300: #9ca3af;
+  --color-slate-400: #6b7280;
+  --color-slate-500: #4b5563;
+  --color-slate-600: #374151;
+  --color-slate-700: #27313b;
+  --color-slate-800: #19262d;
+  --color-slate-900: #11181e;
+  --color-slate-950: #0f171c;
+}
+
+:root {
+  --large-title: 34px;
+  --title1: 28px;
+  --title2: 24px;
+  --title3: 20px;
+  --headline: 19px;
+  --text1: 17px;
+  --subheadline1: 16px;
+  --subheadline2: 15px;
+  --subheadline3: 14px;
+  --caption1: 12px;
+  --caption2: 11px;
+  --max-width: 576px;
+}
+
+.large-title-normal {
+  font-size: var(--large-title);
+  @apply font-normal;
+}
+
+.large-title-semibold {
+  font-size: var(--large-title);
+  @apply font-semibold;
+}
+
+.large-title-bold {
+  font-size: var(--large-title);
+  @apply font-bold;
+}
+
+.title1-normal {
+  font-size: var(--title1);
+  @apply font-normal;
+}
+
+.title1-semibold {
+  font-size: var(--title1);
+  @apply font-semibold;
+}
+
+.title1-bold {
+  font-size: var(--title1);
+  @apply font-bold;
+}
+
+.title2-normal {
+  font-size: var(--title2);
+  @apply font-normal;
+}
+
+.title2-semibold {
+  font-size: var(--title2);
+  @apply font-semibold;
+}
+
+.title2-bold {
+  font-size: var(--title2);
+  @apply font-bold;
+}
+
+.title3-normal {
+  font-size: var(--title3);
+  @apply font-normal;
+}
+
+.title3-semibold {
+  font-size: var(--title3);
+  @apply font-semibold;
+}
+
+.title3-bold {
+  font-size: var(--title3);
+  @apply font-bold;
+}
+
+.headline-normal {
+  font-size: var(--headline);
+  @apply font-normal;
+}
+
+.headline-semibold {
+  font-size: var(--headline);
+  @apply font-semibold;
+}
+
+.headline-bold {
+  font-size: var(--headline);
+  @apply font-bold;
+}
+
+.text1-normal {
+  font-size: var(--text1);
+  @apply font-normal;
+}
+
+.text1-semibold {
+  font-size: var(--text1);
+  @apply font-semibold;
+}
+
+.text1-bold {
+  font-size: var(--text1);
+  @apply font-bold;
+}
+
+.subheadline1-normal {
+  font-size: var(--subheadline1);
+  @apply font-normal;
+}
+
+.subheadline1-semibold {
+  font-size: var(--subheadline1);
+  @apply font-semibold;
+}
+
+.subheadline1-bold {
+  font-size: var(--subheadline1);
+  @apply font-bold;
+}
+
+.subheadline2-normal {
+  font-size: var(--subheadline2);
+  @apply font-normal;
+}
+
+.subheadline2-semibold {
+  font-size: var(--subheadline2);
+  @apply font-semibold;
+}
+
+.subheadline2-bold {
+  font-size: var(--subheadline2);
+  @apply font-bold;
+}
+
+.subheadline3-normal {
+  font-size: var(--subheadline3);
+  @apply font-normal;
+}
+
+.subheadline3-semibold {
+  font-size: var(--subheadline3);
+  @apply font-semibold;
+}
+
+.subheadline3-bold {
+  font-size: var(--subheadline3);
+  @apply font-bold;
+}
+
+.caption1-normal {
+  font-size: var(--caption1);
+  @apply font-normal;
+}
+
+.caption1-semibold {
+  font-size: var(--caption1);
+  @apply font-semibold;
+}
+
+.caption1-bold {
+  font-size: var(--caption1);
+  @apply font-bold;
+}
+
+.caption2-normal {
+  font-size: var(--caption2);
+  @apply font-normal;
+}
+
+.caption2-semibold {
+  font-size: var(--caption2);
+  @apply font-semibold;
+}
+
+.caption2-bold {
+  font-size: var(--caption2);
+  @apply font-bold;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}

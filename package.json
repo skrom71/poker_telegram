@@ -1,0 +1,29 @@
+{
+  "name": "pokertrust",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "w": "pnpm --filter @pokertrust/webapp",
+    "b": "pnpm --filter @pokertrust/backend",
+    "sh": "pnpm --filter @pokertrust/shared",
+    "lint": "concurrently \"pnpm b lint\" \"pnpm w lint\""
+  },
+  "keywords": [],
+  "author": "Viacheslav Tolstopiatenko",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "globals": "^15.14.0",
+    "prettier": "^3.5.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.22.0"
+  },
+  "dependencies": {
+    "superjson": "^2.2.2"
+  }
+}
